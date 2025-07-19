@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aindrila Saha | Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #000000, #111111);
+      color: #fff;
+    }
+
+    nav {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .nav-buttons a {
+      background-color: #536293;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin-left: 1rem;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #536293;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .center-img {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .center-img img {
+      border-radius: 15px;
+      width: 250px;
+      height: auto;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #000;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 calc(33% - 2rem);
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      max-height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .subsection h3 {
+      color: #536293;
+      margin-top: 2rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .skill-card {
+      background-color: #536293;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .download-btn {
+      background-color: #536293;
+      color: white;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      display: inline-block;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      background-color: #000;
+      border: 1px solid #444;
+      color: white;
+      padding: 0.75rem;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      margin-top: 2rem;
+    }
+
+    @media(max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+    }
+
+    .download-btn:hover,
+    .nav-buttons a:hover {
+      background-color: #43507a; /* Slightly darker shade */
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #536293;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h1>Aindrila Saha</h1>
+    <div class="nav-buttons">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="/static/pdfs/resume.pdf" download>Resume</a>
+    </div>
+  </nav>
+
+<div class="center-img" data-aos="fade-in">
+  <img src="/static/images/your-photo.jpg" alt="Aindrila Saha" class="w-10 h-10 rounded-full object-cover mx">
+</div>
+
+
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated Electronics and Communication Engineering student with a strong technical foundation in VLSI design, digital signal processing (DSP), and digital system architecture. Through rigorous academic training and hands-on projects, I have developed proficiency in analyzing and designing complex circuits, optimizing embedded architectures, and implementing efficient signal algorithms. My coursework and certifications have sharpened my skills in hardware description languages, CMOS design flow, and real-time signal analysis. I am enthusiastic about contributing to innovative semiconductor, communication, and embedded system projects, and continuously strive to broaden my expertise across interdisciplinary technologies driving the next generation of electronic systems.
+    </p>
+  </section>
+
+  <section id="education" class="section" data-aos="fade-up">
+  <h2>Education</h2>
+  <div class="cards-container">
+
+    <div class="card">
+      <img src="/static/images/nit.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3>B.Tech in Electronics & Communication Engineering</h3>
+        <p><strong>Institution:</strong> Narula Institute of Technology, Kolkata</p>
+        <p><strong>Duration:</strong> 2022 – 2026</p>
+        <p><strong>CGPA:</strong> 8.2 / 10</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/images/holy.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3>Higher Secondary (Science)</h3>
+        <p><strong>Institution:</strong> Holy Child Institute of Girls Higher Secondary School</p>
+        <p><strong>Board:</strong> WBCHSE</p>
+        <p><strong>Year:</strong> 2020 - 2022</p>
+        <p><strong>Percentage:</strong> 87%</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/images/holy.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3>Secondary Education</h3>
+        <p><strong>Institution:</strong> Holy Child Institute of Girls Higher Secondary School</p>
+        <p><strong>Board:</strong> WBSSE</p>
+        <p><strong>Year:</strong> 2010 - 2020</p>
+        <p><strong>Percentage:</strong> 92%</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="subsection">
+      <h3>Programming Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-card">C</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Tanner EDA</div>
+        <div class="skill-card">SQL</div>
+      </div>
+    </div>
+    <div class="subsection">
+      <h3>Tools</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Simulink</div>
+        <div class="skill-card">MatLab</div>
+        <div class="skill-card">Tanner EDA</div>
+        <div class="skill-card">Arduino IDE</div>
+      </div>
+    </div>
+    <div class="subsection">
+      <h3>Domain</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Control Theory</div>
+        <div class="skill-card">Microcontroller</div>
+        <div class="skill-card">Microprocessor</div>
+        <div class="skill-card">Signal Processing</div>
+        <div class="skill-card">Digital Electronics</div>
+        <div class="skill-card">Microwave Th.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="/static/images/logo.png" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+        <h3>Brew & Bite(Cafe Management system with AI implementation)</h3>
+        <p>• Modular café system with role-based access, real-time POS sync, and SQL-backed inventory and staff
+control. Features dynamic UI, sales analytics, and touch-optimized layout for IoT café environments.
+• Built using Python, SQLite, and pyttsx3, integrating TTS and scalable database management.</p>
+      </div>
+      <div class="card">
+        <img src="/static/images/countdown.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+        <h3>Countdown Timer Web application</h3>
+        <p>• Created a responsive Countdown Timer Web App using HTML, CSS, and JavaScript, featuring realtime countdown logic and interactive controls.Demonstrated skills in DOM manipulation, event
+handling, and JavaScript timing functions, with a clean UI and cross-device compatibility.
+</p>
+      </div>
+      <div class="card">
+        <img src="/static/images/music.png" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+        <h3>Sound - Sync(A Music Recommendation System)</h3>
+        <p>• Implements a hybrid MRS using TF-IDF cosine similarity and dynamic user profiling for adaptive,
+context-aware recommendations.
+• Streamlit UI integrates Spotipy API with ML pipelines, delivering real-time song suggestions validated
+via precision-recall metrics.
+</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience" class="section" data-aos="fade-up">
+    <h2>Experience</h2>
+    <div class="subsection">
+  <h3>Certifications</h3>
+  <div class="cards" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+    <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/cert.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">Coursera - Introduction to Electronics</h3>
+        <a class="download-btn" href="/static/pdfs/dsa.pdf" download>Download</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/cert.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">Coursera - Data Structures</h3>
+        <a class="download-btn" href="/static/pdfs/dsa.pdf" download>Download</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/nptel.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">NPTEL - The Joy of Computing</h3>
+        <a class="download-btn" href="/static/pdfs/The Joy of Computing using Python_compressed (1) (1).pdf Joy of Computing using Python_compressed (1) (1).pdf" download>Download</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/nptel.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">NPTEL - Intro to DB Systems</h3>
+        <a class="download-btn" href="/static/pdfs/Introduction to Database Systems.pdf to Database Systems.pdf" download>Download</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/deloitte.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">Deloitte - Data Analytics</h3>
+        <a class="download-btn" href="/static/pdfs/Deloitte Data.pdf Data.pdf" download>Download</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/deloitte.jpg" alt="Certificate" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">Deloitte - Cybersecurity</h3>
+        <a class="download-btn" href="/static/pdfs/Deloitte Cyber.pdf Cyber.pdf" download>Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="subsection">
+      <h3>Paper Presentation</h3>
+      <div class="cards">
+        <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/paper.jpg" alt="Paper" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">IJARESM - Webpage Design for Countdown Timer</h3>
+        <a class="download-btn" href="/static/pdfs/" download>Download</a>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="subsection">
+      <h3>Internship</h3>
+      <div class="cards">
+        <div style="flex: 1 1 calc(50% - 1rem); display: flex; align-items: center; background-color: #1f1f1f; color: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <img src="/static/images/intern.jpg" alt="Paper" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 1rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 1.2rem;">Prodigy Infotech - Web Development Intern</h3>
+        <a class="download-btn" href="/static/pdfs/Offer Letter (1).pdf Letter (1).pdf" download>Download</a>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+<section id="contact" class="section" data-aos="fade-up">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <p><strong>Phone:</strong> <a href="tel:+918100353594">+91 81003 53594</a></p>
+    <p><strong>Email:</strong> <a href="mailto:aindrilas882@gmail.com">aindrilas882@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aindrilasaha06" target="_blank">click here to connect</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/aindrila06" target="_blank">click here to follow</a></p>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 Aindrila Saha. All Rights Reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<div id="chat-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+  </svg>
+</div>
+
+<div id="chat-container">
+  <div class="chat-header">
+    <h3>Chat with My AI</h3>
+    <span id="close-chat">&times;</span>
+  </div>
+  
+  <div id="chatMessages" class="chat-messages-area">
+    </div>
+  
+  <div class="chat-input-area">
+    <input type="text" id="userInput" placeholder="Ask something..." />
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+
+<style>
+  /* Chat Icon Styling */
+  #chat-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #536293;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+  }
+
+  #chat-icon:hover {
+    transform: scale(1.1);
+  }
+
+  #chat-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Chat Container Styling */
+  #chat-container {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 350px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 70vh;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1001;
+    
+    /* Animation */
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    transform-origin: bottom right;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Active state for showing the container */
+  #chat-container.chat-container--active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Chat Header */
+  .chat-header {
+    background-color: #536293;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chat-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  #close-chat {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* Messages Area */
+  .chat-messages-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #111;
+  }
+  
+  /* Styling for user and bot messages */
+  .chat-messages-area .mb-2 {
+    margin-bottom: 0.75rem;
+  }
+  .chat-messages-area .text-right {
+    text-align: right;
+  }
+  .chat-messages-area .text-left {
+    text-align: left;
+  }
+  .chat-messages-area span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    max-width: 80%;
+    line-height: 1.4;
+  }
+  
+  /* Input Area */
+  .chat-input-area {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #333;
+    background-color: #1c1c1c;
+  }
+
+  .chat-input-area input {
+    flex-grow: 1;
+    border: 1px solid #444;
+    background-color: #000;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    outline: none;
+  }
+  
+  .chat-input-area input:focus {
+    border-color: #536293;
+  }
+
+  .chat-input-area button {
+    background-color: #536293;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .chat-input-area button:hover {
+    background-color: #43507a;
+  }
+
+</style>
+
+<script>
+  // Get all necessary elements
+  const chatIcon = document.getElementById("chat-icon");
+  const chatContainer = document.getElementById("chat-container");
+  const closeChatBtn = document.getElementById("close-chat");
+  const sendBtn = document.getElementById("sendBtn");
+  const userInput = document.getElementById("userInput");
+  const messagesContainer = document.getElementById("chatMessages");
+
+  // Show/Hide chat container
+  chatIcon.addEventListener("click", () => {
+    chatContainer.classList.toggle("chat-container--active");
+  });
+
+  closeChatBtn.addEventListener("click", () => {
+    chatContainer.classList.remove("chat-container--active");
+  });
+  
+  // --- CHAT LOGIC ---
+  sendBtn.addEventListener("click", async () => {
+    const message = userInput.value.trim();
+    if (!message) return;
+
+    // Display user message
+    const userMsg = document.createElement("div");
+    userMsg.className = "mb-2 text-right";
+    userMsg.innerHTML = `<span style="background-color: #536293; color: white;">${message}</span>`;
+    messagesContainer.appendChild(userMsg);
+    userInput.value = "";
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    // Call backend
+    try {
+      const res = await fetch("http://127.0.0.1:5000/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message })
+      });
+
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await res.json();
+      const botMsg = document.createElement("div");
+      botMsg.className = "mb-2 text-left";
+      // Using an inline style for consistency with user message
+      botMsg.innerHTML = `<span style="background-color: #43507a; color: white;">${data.reply}</span>`;
+      messagesContainer.appendChild(botMsg);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    } catch (err) {
+      console.error("Fetch error:", err);
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "mb-2 text-left";
+      errorMsg.innerHTML = `<span style="background-color: #8B0000; color: white;">⚠️ Error: AI not responding. Make sure the Python server is running.</span>`;
+      messagesContainer.appendChild(errorMsg);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+  });
+
+  // Allow sending message with the Enter key
+  userInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      sendBtn.click();
+    }
+  });
+</script>
+
+</body>
+</html>
